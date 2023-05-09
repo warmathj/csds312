@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import time
 from PIL import Image
-from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 from numba import jit
@@ -60,7 +60,7 @@ if __name__ == '__main__':
     print('training...')
 
     start_time = time.time()
-    linReg = LinearRegression()
+    linReg = LogisticRegression()
     linReg = linReg.fit(X_train, y_train)
     y_pred = linReg.predict(X_test)
 
